@@ -15,7 +15,7 @@
     "format": "prettier  --write src/*.js __tests__/*.js",
     "build": "webpack --config webpack-production.config.js --progress --color && babel src --out-dir dist-modules --copy-files",
     "precommit": "./set_up_hooks.sh",
-    "prepare": "webpack --config webpack-production.config.js --progress --color && babel src --out-dir dist-modules --copy-files",
+    "postinstall": "webpack --config webpack-production.config.js --progress --color && babel src --out-dir dist-modules --copy-files",
     "semantic-release": "semantic-release",
     "commit": "git-cz"
   },
